@@ -1,0 +1,129 @@
+* {
+  font-family: "Ruwudu", sans-serif;
+}
+
+body {
+  background-image: url("pp.png");
+  background-size: cover;
+}
+
+h1 {
+  color: #885c53;
+  text-align: center;
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+button {
+  background-color: #885c5333;
+  backdrop-filter: blur(5px);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.buttons {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+.random-number-popup,
+.random-surah-popup {
+  animation: fadeIn 0.5s ease-out;
+  position: absolute;
+  background: #885c53;
+  border-radius: 16px;
+  z-index: 100;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.container {
+  position: relative;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#close-random-number,
+#close-random-surah {
+  cursor: pointer;
+}
+#close:before,
+#close:after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: 16px;
+  width: 4px;
+  height: 24px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#close:before {
+  transform: rotate(45deg);
+}
+
+#close:after {
+  transform: rotate(-45deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
