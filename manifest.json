@@ -1,0 +1,16 @@
+{
+  "name": "قوافي الضاد",
+  "short_name": "قوافي الضاد",
+  "description": "نادي قوافي الضاد ـ المدرسة العليا للأساتذة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7e9cb",
+  "theme_color": "#885c53",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
