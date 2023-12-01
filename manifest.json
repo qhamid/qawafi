@@ -4,6 +4,8 @@
   "description": "نادي قوافي الضاد ـ المدرسة العليا للأساتذة",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
   "background_color": "#f7e9cb",
   "theme_color": "#885c53",
   "icons": [
