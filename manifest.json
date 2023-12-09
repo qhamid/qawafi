@@ -8,6 +8,32 @@
   "scope": "/",
   "background_color": "#f7e9cb",
   "theme_color": "#885c53",
+  "shortcuts": [
+    {
+      "name": "طاولة 0",
+      "short_name": "طاولة 0",
+      "description": "",
+      "url": "./table0.html",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "طاولة 1",
+      "short_name": "طاولة 1",
+      "description": "",
+      "url": "./table1.html",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "/icon.png",
