@@ -6,12 +6,12 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
-  "background_color": "#f5ab66",
-  "theme_color": "#f5ab66",
+  "background_color": "#f5b87e",
+  "theme_color": "#f5b87e",
   "shortcuts": [
     {
-      "name": "طاولة 0",
-      "short_name": "طاولة 0",
+      "name": "طاولة الأخلاقيات",
+      "short_name": "طاولة 1",
       "description": "",
       "url": "./table0.html",
       "icons": [
@@ -22,10 +22,46 @@
       ]
     },
     {
-      "name": "طاولة 1",
-      "short_name": "طاولة 1",
+      "name": "طاولة النحو والصرف",
+      "short_name": "طاولة 2",
       "description": "",
       "url": "./table1.html",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "طاولة البلاغة والمعجميات",
+      "short_name": "طاولة 3",
+      "description": "",
+      "url": "./table2.html",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "طاولة الشعر والعروض",
+      "short_name": "طاولة 4",
+      "description": "",
+      "url": "./table3.html",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "طاولة الثقافة العامة",
+      "short_name": "طاولة 5",
+      "description": "",
+      "url": "./table4.html",
       "icons": [
         {
           "src": "/icon.png",
