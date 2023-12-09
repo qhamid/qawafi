@@ -2,30 +2,47 @@
   font-family: "Ruwudu", sans-serif;
 }
 
-body {
-  background-image: url("pp.png");
+html {
+  background-image: linear-gradient(
+    to right,
+    #f5b87e 0%,
+    #f5ab66 47%,
+    #c68649 100%
+  );
+  background-repeat: no-repeat;
+
+  /* Set the background size to cover the entire element */
   background-size: cover;
+  height: 100%;
 }
 
 h1 {
   color: #885c53;
   text-align: center;
 }
-
-img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.6;
-}
-
 button {
   background-color: #885c5333;
   backdrop-filter: blur(5px);
   border: none;
   outline: none;
   border-radius: 6px;
+  padding: 8px;
+  font-size: large;
+  color: white;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+a {
+  background-color: #885c5333;
+  backdrop-filter: blur(5px);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
   padding: 8px;
   font-size: large;
   color: white;
