@@ -4,7 +4,7 @@
 
 html {
   background-image: linear-gradient(
-    to right,
+    to bottom,
     #f5b87e 0%,
     #f5ab66 47%,
     #c68649 100%
@@ -51,6 +51,16 @@ a {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 299px;
+  opacity: 0.6;
 }
 
 .buttons {
