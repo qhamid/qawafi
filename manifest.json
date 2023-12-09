@@ -6,8 +6,8 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
-  "background_color": "#f7e9cb",
-  "theme_color": "#885c53",
+  "background_color": "#f5ab66",
+  "theme_color": "#f5ab66",
   "shortcuts": [
     {
       "name": "طاولة 0",
