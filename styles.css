@@ -5,9 +5,9 @@
 html {
   background-image: linear-gradient(
     to bottom,
-    #f5b87e 0%,
-    #f5ab66 47%,
-    #c68649 100%
+    hsl(0, 0%, 100%) 0%,
+    #f4ede6 47%,
+    #f8d4b2 100%
   );
   background-repeat: no-repeat;
 
