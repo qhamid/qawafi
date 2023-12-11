@@ -94,6 +94,7 @@ img {
   width: 90%;
   top: 50%;
   left: 50%;
+  padding: 0 4px 4px;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -115,7 +116,7 @@ img {
 
 .number {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #close-random-number,
@@ -153,4 +154,21 @@ img {
   to {
     opacity: 1;
   }
+}
+
+.random-q-popup {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+#answer {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #63433c;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
