@@ -3,13 +3,15 @@ const randomSurahButton = document.querySelector("#random-surah");
 const body = document.body;
 
 randomNumberButton.addEventListener("click", () => {
-  const randomNumber = getRandomNumber(1, 40);
+  const randomNumber = getRandomQuestion();
+  console.log(randomNumber);
   const randomNumberPopup = document.querySelector(".random-number-popup");
   if (!randomNumberPopup) {
-    const htmlElement = `<div class="random-number-popup">
-    <div class="container">
-    <h2>:السؤال رقم</h2>
-    <span class="number">${randomNumber}</span>
+    const htmlElement = `<div class="random-number-popup random-q">
+    <div class="container random-q">
+    <h2>:السؤال هو</h2>
+    <span class="number">${randomNumber[0]}</span>
+    <button id="answer">الإجابة</button>
     <span id="close-random-number">
         <span id="close">
         </span>
@@ -19,6 +21,13 @@ randomNumberButton.addEventListener("click", () => {
 
     body.insertAdjacentHTML("beforeend", htmlElement);
     const randomNumberPopup = document.querySelector(".random-number-popup");
+    if (randomNumberPopup) {
+      const answer = document.querySelector("#answer");
+      answer.addEventListener("click", () => {
+        answer.textContent = randomNumber[1];
+        answer.removeEventListener("click", () => {});
+      });
+    }
     const close = document.querySelector("#close-random-number");
     close.addEventListener("click", () => {
       randomNumberPopup.classList.add("hide");
@@ -56,31 +65,8 @@ randomSurahButton.addEventListener("click", () => {
   }
 });
 
-// randomSurahButton.addEventListener("click", () => {
-//   const randomSurah = getRandomSurah();
-//   const randomSurahPopup = document.querySelector(".random-surah-popup");
-//   if (!randomSurahPopup) {
-//     const htmlElement = `<div class="random-surah-popup">
-//     <div class="container">
-//     <h2>:السورة هي</h2>
-//         <span class="number">${randomSurah}</span>
-//         <span id="close-random-surah">
-//         <span id="close">
-//         </span>
-//         </span>
-//       </div>
-//       </div>`;
-
-//     body.insertAdjacentHTML("beforeend", htmlElement);
-//     const close = document.querySelector("#close-random-surah");
-//     close.addEventListener("click", () => {
-//       body.removeChild(document.querySelector(".random-surah-popup"));
-//     });
-//   }
-// });
-
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function getRandomQuestion() {
+  return question[Math.floor(Math.random() * question.length)];
 }
 
 function getRandomSurah() {
@@ -156,3 +142,109 @@ function getRandomSurah() {
   const randomIndex = Math.floor(Math.random() * suras.length);
   return suras[randomIndex];
 }
+
+const question = [
+  ["من قتل عبد الله بن الزبير؟", "الحجاج بن يوسف"],
+  [
+    "كان العرب وبالأخص قريش يؤرخون بواقعة الفيل، بم كانوا يؤرخون قبل عام الفيل؟",
+    "بموت كعب بن لؤي",
+  ],
+  [
+    "ماذا تعرف من نسب النبي صلى الله عليه وسلم؟",
+    "محمد بن عبد الله بن عبد المطلب بن هاشم بن عبد مناف بن قصي بن كلاب",
+  ],
+  [
+    "ماذا تعرف عن سور المفصل؟ ما أول سورة منه وما آخر سورة؟",
+    "من الحجرات للناس",
+  ],
+  [
+    "يقول الزمخشري: من عَرَف القرآنَ رَعَفَ الأقران, ماذا يقصد بكلامه؟",
+    "رعف بمعنى سبق، أي من عرف القرآن سبق الأقران",
+  ],
+  ["نزل القرآن على كذا حرف، كم عدد الأحرف المذكورة في الحديث؟", "سبعة"],
+  ["ماهي المعركة التي يطلق عليها (فتح الفتوح)؟", "فتح مكة"],
+  ["ماذا كانت آخر غزوة شهدها النبي صلى الله عليه وسلم؟", "غزوة تبوك"],
+  [
+    "كم عدد أولاد النبي نوح عليه السلام على المذكور؟ وما أسماؤهم؟",
+    "أربعة: سام، حام، يافث، كنعان",
+  ],
+  [
+    "كم نبي ذكر في القرآن؟ سمّ خمسة منهم مع مراعاة الترتيب والتسلسل الزمني",
+    "25",
+  ],
+  ["اذكر نبيا لم يذكر اسمه في القرآن؟", "يوشع بن نون، شيث بن آدم، ..."],
+  [
+    "من هو النبي الذي كان مع موسى عليه السلام في رحلته مع الخضر (فتى موسى)؟",
+    "يوشع بن نون",
+  ],
+  [
+    "ما هي فرائض الوضوء؟",
+    "النية، غسل اليدين إلى المرفقين، غسل الوجه، مسح الرأس، غسل الرجلين إلى الكعبين، الدلك والموالاة.",
+  ],
+  [
+    "عدد فرائض الصلاة؟!",
+    "16، تكبيرة الإحرام والقيام لها، الفاتحة والقيام لها، الركوع والرفع منه، السجود والرفع منه، السلام والجلوس له، الطمأنينة.",
+  ],
+  [
+    "من هم أولو العزم من الرسل؟",
+    "نوح، إبراهيم،موسى، عيسى، محمد صلى الله عليه وسلم.",
+  ],
+  [
+    "ما الآية التي ذكر فيها حرف الميم نطقا ثمان مرات متتالية دون فاصل؟",
+    "قيل يا نوح اهبط بسلام منا وبركات عليك وعلى أمم ممن معك",
+  ],
+  ["من هو سيد بني آدم؟", "محمد صلى الله عليه وسلم"],
+  ["باب الريان من أبواب الجنة، لمن يخصص؟", "للصائمين"],
+  ["من هو الذي لقبه النبي صلى الله عليه وسلم بفرعون هذه الأمة؟", "أبو جهل"],
+  ["كم عدد أزواج النبي؟ سم من تعرف منهن.", "11"],
+  ["لم خلقنا الله تعالى؟", "لعبادته"],
+  [
+    "ما الفرق بين السور المكية والمدنية؟ اذكر عدد كل منهما.",
+    "أربع وسبعون مكية وإحدى وعشرون مدنية",
+  ],
+  ["على من يطلق لقب الأئمة الأربعة؟", "أبو حنيفة، مالك، الشافعي، أحمد"],
+  [
+    "كم عدد الأئمة أصحاب القراءات المتواترة؟ اذكر من تعرف منهم",
+    "نافع، ابن كثير، أبو عمرو، ابن عامر، عاصم، حمزة، الكسائي، أبو جعفر، يعقوب الحضرمي، خلف العاشر.",
+  ],
+  ["نبي آمن به كل قومه؟", "يونس ابن متى"],
+  ["من أول من قرأ وكتب؟", "النبي إدريس عليه السلام"],
+  ["من أول من صنع الدروع؟", "النبي داود عليه السلام"],
+  ["النبي الذي توقفت له الشمس؟", "يوشع بن نون"],
+  [
+    "ملك الأرض أربعة، مؤمنان وكافران، اذكرهم؟!",
+    "سليمان وذو القرنين، النمرود وبختنصر",
+  ],
+  ["من النبي الذي قتل جالوت؟", "داود عليه السلام"],
+  ["النبي الذي آمن بإبراهيم عليه السلام؟", "لوط عليه السلام"],
+  [
+    "ماهي الآية التي إحتوت على جميع حروف اللغة العربية؟",
+    "آخر آية في سورة الفتح",
+  ],
+  ["ماهي أطول آية في القرآن الكريم؟", "آية المداينة"],
+  [
+    "ما إسم سكان المدينة المنورة الذين آمنوا بالرسول عليه الصلاة والسلام؟",
+    "الأوس والخزرج",
+  ],
+  [
+    "من هي الأم الوحيدة التي رغم أنها أم ولكنها لم تنجب ولا مرة في حياتها؟",
+    "أم المؤمنين عائشة رضي الله عنها",
+  ],
+  [
+    "ليلة الإسراء إمتطى النبي محمد صلى الله عليه وسلم دابة مجنحة ما إسمها؟",
+    "البراق",
+  ],
+  ["من هو الصحابي الذي لقب بأسد الله ورسوله؟", "حمزة بن عبد المطلب"],
+  [
+    "نبي دعا ربه وقال (رب إني مسني الضر وأنت أرحم الراحمين)؟",
+    "أيوب عليه السلام",
+  ],
+  [
+    "اذكر آية أمرنا الله فيها بغض البصر.ولماذا؟وماهي فوائده؟",
+    "قُلْ لِلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ وَيَحْفَظُوا فُرُوجَهُمْ ذَلِكَ أَزْكَى لَهُمْ إِنَّ اللَّهَ خَبِيرٌ بِمَا يَصْنَعُونَ",
+  ],
+  [
+    "ما اسم السد الذي بسبأ والذي دمره سيل العرم المذكور في سورة سبأ؟",
+    "سد مأرب",
+  ],
+];
